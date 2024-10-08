@@ -3,5 +3,6 @@ export const DbConstants = {
   TABLES: {
     SPORTS: 'sports',
     CATEGORIES: 'categories',
+    ARTICLES: 'articles'
   },
 };

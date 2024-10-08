@@ -11,6 +11,9 @@ import { SportsModule } from './sports/sports.module';
 import { CategoriesController } from './categories/categories.controller';
 import { CategoriesService } from './categories/categories.service';
 import { CategoriesModule } from './categories/categories.module';
+import { ArticlesController } from './articles/articles.controller';
+import { ArticlesService } from './articles/articles.service';
+import { ArticlesModule } from './articles/articles.module';
 
 @Module({
   imports: [
@@ -18,10 +21,11 @@ import { CategoriesModule } from './categories/categories.module';
     KnexOrmModule,
     CommonModule,
     SportsModule,
-    CategoriesModule
+    CategoriesModule,
+    ArticlesModule
   ],
-  controllers: [AppController, SportsController, CategoriesController],
-  providers: [AppService, Logger, CategoriesService],
+  controllers: [AppController, SportsController, CategoriesController, ArticlesController],
+  providers: [AppService, Logger, CategoriesService, ArticlesService],
 })
 export class AppModule implements OnApplicationBootstrap {
   constructor(
